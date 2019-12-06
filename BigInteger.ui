@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BigIntegerClass</class>
+ <widget class="QMainWindow" name="BigIntegerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>693</width>
+    <height>615</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>大数运算</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>请输入第一个数字：</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="com_op">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>180</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>+</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>230</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>请输入第二个数字：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>400</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>结果：</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_cal">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>450</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>计算</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_rand1">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>60</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>生成随机数</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_rand2">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>290</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>生成随机数</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="text_num1">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>501</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="text_num2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>250</y>
+      <width>501</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="text_res">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>430</y>
+      <width>501</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="allowedAreas">
+    <set>Qt::AllToolBarAreas</set>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="BigInteger.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btn_rand1</sender>
+   <signal>clicked()</signal>
+   <receiver>BigIntegerClass</receiver>
+   <slot>btn_rand1_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>604</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>571</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_rand2</sender>
+   <signal>clicked()</signal>
+   <receiver>BigIntegerClass</receiver>
+   <slot>btn_rand2_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>588</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>567</x>
+     <y>374</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_cal</sender>
+   <signal>clicked()</signal>
+   <receiver>BigIntegerClass</receiver>
+   <slot>btn_cal_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>612</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>573</x>
+     <y>540</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btn_rand1_click()</slot>
+  <slot>btn_rand2_click()</slot>
+  <slot>btn_cal_click()</slot>
+ </slots>
+</ui>
